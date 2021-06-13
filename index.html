@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>GDE Profile Badge Generator</title>
+<title>GCR Profile Badge Generator</title>
 <meta name="description" content="GDE Profile Badge Generator">
 <meta property="og:image" content="https://gde-badge.limhenry.xyz/cover.png" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="shortcut icon" href="./favicon.png">
-<link crossorigin="anonymous" href="https://fonts.googleapis.com/icon?family=Google+Sans:400&display=swap" rel="stylesheet" />
+<link rel="shortcut icon" href="./cloudy.png">
+<link rel="stylesheet" href="style.css">
+<link crossorigin="anonymous" href="https://fonts.googleapis.com/icon?family=Google+Sans:400&display=swap"
+  rel="stylesheet" />
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-57741199-15"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
 
   gtag('config', 'UA-57741199-15');
@@ -172,30 +174,35 @@
       height: 56px;
       font-size: 20px;
     }
+
     .main-container {
       flex-direction: column;
     }
+
     .input-panel,
     .preview-panel {
       width: 100%;
       max-width: initial;
     }
+
     .preview-panel {
       padding: 24px 0 96px 0;
       flex: 1;
     }
+
     .input {
       margin-bottom: 24px;
     }
+
     .download-fab {
       width: 56px;
       height: 56px;
     }
-  } 
+  }
 </style>
 
 <header>
-  <div class="title">GDE Profile Badge Generator</div>
+  <div class="title">GCR Profile Badge Generator</div>
 </header>
 
 <div class="main-container">
@@ -209,21 +216,11 @@
       <label for="category">Category Name</label>
       <input id="category" list="gde-category" class="category-input" type="text" oninput="draw()" />
       <datalist id="gde-category">
-        <option value="Android">
-        <option value="Angular">
-        <option value="Assistant">
-        <option value="Dart">
-        <option value="Firebase">
-        <option value="Flutter">
-        <option value="G Suite">
-        <option value="Go">
-        <option value="Google Cloud">
-        <option value="Google Maps">
-        <option value="IoT">
-        <option value="Kotlin">
-        <option value="Machine Learning">
-        <option value="Payments">
-        <option value="Web">
+        <option value="Milestone1">
+        <option value="Milestone2">
+        <option value="Milestone3">
+        <option value="Milestone4">
+
       </datalist>
     </div>
     <div class="input">
@@ -235,6 +232,7 @@
       </div>
     </div>
   </div>
+
   <div class="preview-panel">
     <canvas></canvas>
     <div class="download-fab" onclick="download()">
@@ -301,7 +299,7 @@
   }
 
   const banner = new Image()
-  banner.src = './experts.svg'
+  banner.src = './cloud18.png'
   banner.onload = () => {
     draw()
   }
@@ -318,14 +316,14 @@
           break
         }
         default: {
-          const size = Math.min ( image.width, image.height )
+          const size = Math.min(image.width, image.height)
           canvas.width = 500
           canvas.height = 500
           const hRatio = canvas.width / image.width
           const vRatio = canvas.height / image.height
-          const ratio  = Math.max ( hRatio, vRatio )
-          const x = ( canvas.width - image.width * ratio ) / 2
-          const y = ( canvas.height - image.height * ratio ) / 2
+          const ratio = Math.max(hRatio, vRatio)
+          const x = (canvas.width - image.width * ratio) / 2
+          const y = (canvas.height - image.height * ratio) / 2
           ctx.drawImage(image, 0, 0, image.width, image.height, x, y, image.width * ratio, image.height * ratio)
           break
         }
@@ -351,7 +349,7 @@
     ctx.fillText(category, canvas.width / 2, fontY)
 
     if (shape === 'circle') {
-      ctx.globalCompositeOperation='destination-in'
+      ctx.globalCompositeOperation = 'destination-in'
       ctx.beginPath()
       ctx.arc(canvas.width / 2, canvas.height / 2, canvas.height / 2, 0, Math.PI * 2)
       ctx.closePath()
