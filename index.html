@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>GCR Profile Badge Generator</title>
+<title>AIESEC Photobooth</title>
 <meta name="description" content="GDE Profile Badge Generator">
 <meta property="og:image" content="https://gde-badge.limhenry.xyz/cover.png" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -202,7 +202,7 @@
 </style>
 
 <header>
-  <div class="title">GCR Profile Badge Generator</div>
+  <div class="title">AIESEC Recruitments</div>
 </header>
 
 <div class="main-container">
@@ -216,11 +216,7 @@
       <label for="category">Category Name</label>
       <input id="category" list="gde-category" class="category-input" type="text" oninput="draw()" />
       <datalist id="gde-category">
-        <option value="Milestone1">
-        <option value="Milestone2">
-        <option value="Milestone3">
-        <option value="Milestone4">
-
+        <option value="I Nominate">
       </datalist>
     </div>
     <div class="input">
@@ -299,7 +295,7 @@
   }
 
   const banner = new Image()
-  banner.src = './cloud18.png'
+  banner.src = './image.png'
   banner.onload = () => {
     draw()
   }
